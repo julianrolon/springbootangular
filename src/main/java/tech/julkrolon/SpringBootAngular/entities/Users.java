@@ -12,10 +12,10 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class User {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

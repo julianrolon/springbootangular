@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import tech.julkrolon.SpringBootAngular.entities.User;
+import tech.julkrolon.SpringBootAngular.entities.Users;
 import tech.julkrolon.SpringBootAngular.services.UserService;
 
 @RestController
@@ -18,13 +18,13 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public Iterable<User> getUsers(){
+    public Iterable<Users> getUsers(){
         return userService.getUsersFromDB();
     }
 
     @PostMapping("/users")
-    void addUser(@RequestBody User user){
-        userService.saveUser(user);
+    void addUser(@RequestBody Users users){
+        userService.saveUser(users);
     }
 
 }

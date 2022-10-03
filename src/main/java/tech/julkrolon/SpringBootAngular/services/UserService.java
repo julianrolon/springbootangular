@@ -1,8 +1,10 @@
 package tech.julkrolon.SpringBootAngular.services;
 
-import tech.julkrolon.SpringBootAngular.entities.User;
+import org.springframework.stereotype.Service;
+import tech.julkrolon.SpringBootAngular.entities.Users;
 import tech.julkrolon.SpringBootAngular.repositories.UserRepository;
 
+@Service
 public class UserService {
 
     private final UserRepository userRepository;
@@ -11,11 +13,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Iterable<User> getUsersFromDB() {
+    public Iterable<Users> getUsersFromDB() {
         return userRepository.findAll();
     }
 
-    public void saveUser(User user) {
-        userRepository.save(user);
+    public void saveUser(Users users) {
+        userRepository.save(users);
     }
 }
