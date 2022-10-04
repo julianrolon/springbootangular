@@ -23,8 +23,8 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    void addUser(@RequestBody Users users){
-        userService.saveUser(users);
+    Users addUser(@RequestBody Users users){
+        return userService.saveUser(users);
     }
 
 }

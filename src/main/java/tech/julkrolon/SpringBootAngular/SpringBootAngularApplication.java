@@ -21,11 +21,11 @@ public class SpringBootAngularApplication {
 		return args -> {
 			Stream.of("Juan", "Julia", "Helena", "Raquel")
 					.forEach(name->{
-						Users users = Users.builder()
+						Users user = Users.builder()
 								.name(name)
 								.email(name.toLowerCase()+"@julkrolon.tech")
 								.build();
-						userRepository.save(users);
+						userRepository.save(user);
 					});
 					userRepository.findAll().forEach(System.out::println);
 		};

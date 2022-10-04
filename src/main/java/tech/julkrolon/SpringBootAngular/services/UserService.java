@@ -17,7 +17,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void saveUser(Users users) {
-        userRepository.save(users);
+    public Users saveUser(Users users) {
+        return userRepository.save(users);
     }
 }
